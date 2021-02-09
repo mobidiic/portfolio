@@ -1,0 +1,152 @@
+{
+    "services" : [
+        {
+            "title" : {
+                "kr" : "롯데프레시 운영",
+                "en" : "Lottefresh Service Ops"
+            },
+            "start_dtime" : "201902",
+            "end_dtime" : "202011",
+            "type" : "OPS",
+            "details" : {
+                "images" : [],
+                "role" : {
+                    "kr" : "개발PM",
+                    "en" : "TPM"
+                },
+                "discription" : {
+                    "kr" : [
+                        "서비스 운영, 개발관리",
+                        "개발공수산정 및 배포 일정관리",
+                        "요건 접수 및 기능설계",
+                        "장애관리 및 운영개선"
+                    ],
+                    "en" : [
+                        "Service dev-ops, Dev team managing",
+                        "Checking M/M and Deploy managing",
+                        "Accept requirement and Feature design",
+                        "Incident management and service improvement"
+                    ]
+                },
+                "key_logs" : {
+                    "kr" : [
+                        "종속상품재고통합 - 결품율 2%p 감소",
+                        "새벽배송권역 확장 - 새벽베송매출 13% 증가"
+                    ],
+                    "en" : [
+                        "Depended product stock integration - 3%p decrease in sold-out rate",
+                        "Expansion of Delivery in Dawn Coverage - 13% increase in Delivery in dawn revenue"
+                    ]
+                }
+            }
+        },
+        {
+            "title" : {
+                "kr" : "기가지니 GPAY 프로젝트",
+                "en" : "KT Gigagenie Gpay Prj"
+            },
+            "start_dtime" : "201904",
+            "end_dtime" : "201909",
+            "type" : "PRJ",
+            "details" : {
+                "images" : [],
+                "role" : {
+                    "kr" : "PM",
+                    "en" : "PM"
+                },
+                "object" : {
+                    "kr" : "음성결제수단 gpay 추가, VC 매출 신장",
+                    "en" : "Add Voice Payment, Increase VC Sales"
+                },
+                "outcomes" : {
+                    "kr" : "매출 10% 증가",
+                    "en" : "10% Increase in Sales"
+                },
+                "learned" : {
+                    "kr" : [
+                        "음성, 리모콘 UI의 특성",
+                        "3자 커뮤니케이션의 어려움",
+                        "프로젝트 매니징 전반"
+                    ],
+                    "en" : [
+                        "Voice, Remote-controller UI",
+                        "Difficulty of Cross-communication",
+                        "Overall Project Managing"
+                    ]
+                }
+            }
+        },
+        {
+            "title" : {
+                "kr" : "롯데ON-롯데프레시 통합 프로젝트",
+                "en" : "LotteON-Lottefresh Merging Prj"
+            },
+            "start_dtime" : "201904",
+            "end_dtime" : "201909",
+            "type" : "PRJ",
+            "details" : {
+                "images" : [],
+                "role" : {
+                    "kr" : "개발PM",
+                    "en" : "TPM"
+                },
+                "object" : {
+                    "kr" : "롯데ON-롯데프레시 서비스 통합",
+                    "en" : "LotteON-Lottefresh service integration"
+                },
+                "outcomes" : {
+                    "kr" : "적시 양품 반영, 확장성 고려한 구조개선",
+                    "en" : "In Time with appropriate Service level, and renewal to scalable structure"
+                },
+                "learned" : {
+                    "kr" : [
+                        "MSA 내 여러 시스템간 데이터 싱크 맞추는 작업",
+                        "TC의 중요성과 오픈/롤백 시나리오의 중요성"
+                    ],
+                    "en" : [
+                        "Sync Data in MSA",
+                        "Importance of Testcase and open/rollback scenario"
+                    ]
+                }
+            }
+        },
+        {
+            "title" : {
+                "kr" : "롯데ON 전시 운영",
+                "en" : "LotteOn Display Ops"
+            },
+            "start_dtime" : "202012",
+            "end_dtime" : "",
+            "type" : "OPS",
+            "details" : {
+                "images" : [],
+                "role" : {
+                    "kr" : "전시서비스 개발PM",
+                    "en" : "Display Service TPM"
+                },
+                "discription" : {
+                    "kr" : [
+                        "서비스 운영, 개발관리, 개발",
+                        "개발공수산정 및 배포 일정관리",
+                        "요건 접수 및 기능설계",
+                        "장애관리 및 운영개선"
+                    ],
+                    "en" : [
+                        "Service dev-ops, Dev team managing, Development",
+                        "Checking M/M and Deploy managing",
+                        "Accept requirement and Feature design",
+                        "Incident management and service improvement"
+                    ]
+                },
+                "key_logs" : {
+                    "kr" : [
+                        "전면장애포인트 및 성능개선(매장 GEN) - "
+                    ],
+                    "en" : [
+                        "removing SPOF and performance improvement by GEN - "
+                    ]
+                }
+            }
+        }
+    ]
+}
