@@ -1,0 +1,50 @@
+div .header__box {
+
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+
+    .header__menu {
+        padding: 10px;
+    }
+
+    .layer__button_close {
+        color: red;
+    }
+    
+    .header__title {
+        padding: 10px;
+
+    }
+
+    .header__button {
+        padding: 10px;
+
+    }
+}
+
+
+
+div .body__box {
+
+    padding-top: 50px;
+
+    .body__layer {
+        color: blue;
+
+    }
+
+
+    .none {
+        display: none !important;
+    }
+
+
+
+}
+
+div .footer__progressbar {
+    color : blue;
+}
