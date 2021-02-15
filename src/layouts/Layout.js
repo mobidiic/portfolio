@@ -3,7 +3,8 @@ import TitlePage from "../pages/TitlePage/TitlePage";
 import IntroPage from "../pages/IntroPage/IntroPage";
 import SkillTable from "../pages/SkillTable/SkillTable";
 import PortPage from "../pages/PortPage/PortPage";
-import CateLayer from "../components/CateLayer"
+import DsPage from "../pages/DsPage/DsPage";
+import CateLayer from "../components/CateLayer/CateLayer"
 import style from "./Layout.module.scss";
 
 export const UserContext = React.createContext();
@@ -59,6 +60,7 @@ const Layout = () => {
                     <IntroPage />
                     <SkillTable />
                     <PortPage />
+                    <DsPage />
                 </UserContext.Provider>
             </div>
             <div className={style.footer__progressbar}>
