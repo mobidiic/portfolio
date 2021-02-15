@@ -11,11 +11,9 @@ export const UserContext = React.createContext();
 
 const Layout = () => {
 
-    const [ lang, setLang ] = useState("KR");
+    const [ lang, setLang ] = useState("EN");
     const [ isOpened , setIsOpened ] = useState(false);
     const viewLang = lang == "EN" ? "KR" : "EN" ;
-    // console.log("lang : " + lang);
-    // console.log("viewLang : " + viewLang);
 
     const handleLanguage = () => {
         if(lang == "EN"){
@@ -25,7 +23,6 @@ const Layout = () => {
         }
     };
 
-    // [todo] function => 햄버거 메뉴 누를 때, 햄버거메뉴 불러오기, 애니메이션, 닫기버튼 만들기
     const handleToggleLayer = () => {
         setIsOpened(!isOpened);
         console.log("isOpened : "+ isOpened);
@@ -40,7 +37,7 @@ const Layout = () => {
         <div>
             <div className={style.header__box}>
                 <div className={ !isOpened ?  style.header__menu : style.layer__button_close }>
-                    <a onClick={handleToggleLayer}>
+                    <a onClick={ handleToggleLayer }>
                         ham
                     </a>
                 </div>
@@ -48,7 +45,7 @@ const Layout = () => {
                     header-title
                 </div>
                 <div className={style.header__button}>
-                    <button onClick={handleLanguage}> {viewLang} </button>
+                    <button onClick={ handleLanguage }> {viewLang} </button>
                 </div>
             </div>
             <div className={style.body__box}>

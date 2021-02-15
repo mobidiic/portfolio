@@ -11,12 +11,12 @@ const PortPage = () => {
     const services = WE.services;
 
     const mapToWorkComponent = (service) => {
-        console.log("mapToWorkComponent : " + JSON.stringify(service));
+        // console.log("mapToWorkComponent : " + JSON.stringify(service));
         return service.map((work, i) => generateOpPrWork(work, i))
     };
 
     const generateOpPrWork = (work, i) => {
-        console.log("generateOpPrWork : " + work.type + " / " + i);
+        // console.log("generateOpPrWork : " + work.type + " / " + i);
         if (work.type == "PRJ") {
             return mapPrWork(work, i)
         } else if (work.type == "OPS") {
@@ -28,7 +28,7 @@ const PortPage = () => {
     };
 
     const mapOpWork = (work, i) => {
-        console.log("mapOpWork : " + work.title[lang] + " / "+ work.start_dtime + " / "+ work.end_dtime + " / "+ work.details.images + " / "+ work.details.role[lang] + " / "+ work.details.description[lang] + " / " + work.details.key_logs[lang] + " / " + i);
+        // console.log("mapOpWork : " + work.title[lang] + " / "+ work.start_dtime + " / "+ work.end_dtime + " / "+ work.details.images + " / "+ work.details.role[lang] + " / "+ work.details.description[lang] + " / " + work.details.key_logs[lang] + " / " + i);
         return (
             <OpPort 
                 title = {work.title[lang]}
@@ -43,7 +43,7 @@ const PortPage = () => {
     };
 
     const mapPrWork = (work, i) => {
-        console.log("mapPrWork : " + work.title[lang] + " / "+ work.start_dtime + " / "+ work.end_dtime + " / "+ work.details.images + " / "+ work.details.role[lang] + " / "+ work.details.object[lang] + " / " + work.details.outcomes[lang] + " / " + work.details.learned[lang] + " / "  + i);
+        // console.log("mapPrWork : " + work.title[lang] + " / "+ work.start_dtime + " / "+ work.end_dtime + " / "+ work.details.images + " / "+ work.details.role[lang] + " / "+ work.details.object[lang] + " / " + work.details.outcomes[lang] + " / " + work.details.learned[lang] + " / "  + i);
         return (
             <PrPort 
                 title = {work.title[lang]}
@@ -71,26 +71,3 @@ const PortPage = () => {
 };
 
 export default PortPage;
-
-/*
-const links = sites.links;
-
-const mapToLinkButton = ( data ) => {
-    return data.map((site, i) => {
-        return (<LinkButton 
-            title = {site.title} 
-            comment = {site.comment}
-            link = {site.link}
-            icoName = {site.icoName}
-            key = {i} />)
-    })
-};
-
-const SiteList = () => {
-    return (
-        <div className={style.siteList__box}>
-            {mapToLinkButton(links)}
-        </div>
-    )
-};
-*/
