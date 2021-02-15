@@ -8,7 +8,7 @@ const TitlePage = () => {
                 TitlePage-title
             </div>
             <div className={style.page__contents}>
-                TitlePage-contents
+                Cean Park, Product Manager
             </div>
         </div>
     )

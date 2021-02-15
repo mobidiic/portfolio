@@ -25,7 +25,7 @@ const Layout = () => {
 
     const handleToggleLayer = () => {
         setIsOpened(!isOpened);
-        console.log("isOpened : "+ isOpened);
+        // console.log("isOpened : "+ isOpened);
     };
 
     // [todo] header 타이틀 스크롤 위치에 따라 변경

@@ -26,9 +26,23 @@
     unicode-range: U+0020-007E;
 }
 
+@font-face {
+    font-family: "Nanum D-DIN italic";
+    src: url("./assets/fonts/NanumGothic.ttf") format('truetype');
+}
+
+@font-face {
+    //(영어, 숫자, 특수문자)인 경우 D-DIN 폰트 사용
+    font-family: "Nanum D-DIN italic";
+    src: url("./assets/fonts/D-DIN-Italic.ttf") format('truetype');
+    unicode-range: U+0020-007E;
+}
+
 .App {
 
     font-family: "Nanum D-DIN";
+    background-color: #f6f4f1;
+    color: #262626;
 
     .header__contents {
     }

@@ -21,7 +21,6 @@ const IntroPage = () => {
                 IntroPage-title
             </div>
             <div className={style.page__contents}>
-                IntroPage-contents
                 <div>
                     { ID.vision[lang] }
                 </div>
