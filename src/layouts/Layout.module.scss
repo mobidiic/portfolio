@@ -1,17 +1,15 @@
+//변수 할당
+$pb-height: 10px; //프로그레스바 높이
+
+
 div .header__box {
 
     width: 100%;
-    position: absolute;
-    z-index: 2;
+    position: fixed;
     display: flex;
     justify-content: space-between;
 
     .header__menu {
-        padding: 10px;
-    }
-
-    .layer__button_close {
-        color: red;
         padding: 10px;
     }
     
@@ -28,6 +26,27 @@ div .header__box {
     }
 }
 
+div .header__box__onlayer {
+
+    z-index: 9;
+
+    .layer__button_close {
+        color: red;
+        padding: 10px;
+    }
+
+    .header__title {
+        display: none;
+
+    }
+
+    .header__button {
+        display: none;
+
+    }
+
+}
+
 
 
 div .body__box {
@@ -35,7 +54,6 @@ div .body__box {
     padding-top: 50px;
 
     .body__layer {
-        color: blue;
 
     }
 
@@ -48,6 +66,24 @@ div .body__box {
 
 }
 
+div .body__box__onlayer {
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+
 div .footer__progressbar {
-    color : blue;
+    background-color : #7a6661;
+    width: 100vw;
+    height: #{$pb-height};
+
+    position: fixed;
+    z-index: 2;
+    top: calc( 100vh - #{$pb-height} );
+}
+
+div .footer__progressbar__onlayer {
+    display: none;
 }

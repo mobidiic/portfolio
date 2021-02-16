@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import TitlePage from "../pages/TitlePage/TitlePage";
 import IntroPage from "../pages/IntroPage/IntroPage";
 import SkillTable from "../pages/SkillTable/SkillTable";
@@ -14,6 +14,7 @@ const Layout = () => {
     const [ lang, setLang ] = useState("EN");
     const [ isOpened , setIsOpened ] = useState(false);
     const viewLang = lang == "EN" ? "KR" : "EN" ;
+    let pgbarWidth = 0;
 
     const handleLanguage = () => {
         if(lang == "EN"){
@@ -25,18 +26,57 @@ const Layout = () => {
 
     const handleToggleLayer = () => {
         setIsOpened(!isOpened);
-        // console.log("isOpened : "+ isOpened);
+        if( !isOpened ) {
+            setOnScrollEventById("layout__body", handleOnScrollOpened)
+        } else {
+            removeOnScrollEventById("layout__body", handleOnScrollOpened)
+        }
     };
+
+    const handleOnScrollOpened = useCallback((e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        return false
+    }, [])
+
+    const handleOnScrollClosed = () => {
+        let _scrollY = window.scrollY;
+        let _totalHeight = (document.height !== undefined) ? document.height : document.body.offsetHeight;
+        let _deviceHeight = window.innerHeight;
+        let _tgtHeight = _totalHeight - _deviceHeight;
+        pgbarWidth = ( _scrollY / _tgtHeight ) * 100;
+        pgbarWidth += "%";
+        console.log("pgbarWidth : " +  pgbarWidth);
+    };
+
+    const setOnScrollEventById = (el, func) => {
+        document.getElementById(el).addEventListener('scroll', func);
+        document.getElementById(el).addEventListener('touchmove', func);
+        document.getElementById(el).addEventListener('mousewheel', func);
+    };
+
+    const removeOnScrollEventById = (el, func) => {
+        document.getElementById(el).removeEventListener('scroll', func);
+        document.getElementById(el).removeEventListener('touchmove', func);
+        document.getElementById(el).removeEventListener('mousewheel', func);
+    };
+
+    useEffect(()=> {
+        setOnScrollEventById("layout__body", handleOnScrollClosed);
+    }, []);
+
+    // [todo] 카테고리레이어 호출 시 햄버거메뉴 닫기버튼으로 전환 + 애니메이션 추가
 
     // [todo] header 타이틀 스크롤 위치에 따라 변경
 
-    // [todo] footer 프로그레스바 생성
+
+    // [todo] footer 프로그레스바 스크롤 위치에 따라 width 변경
 
 
     return (
-        <div>
-            <div className={style.header__box}>
-                <div className={ !isOpened ?  style.header__menu : style.layer__button_close }>
+        <div id="layout__body">
+            <div className={ !isOpened ?  style.header__box : `${style.header__box} ${style.header__box__onlayer}` } >
+                <div className={ !isOpened ?  style.header__menu : style.layer__button_close } >
                     <a onClick={ handleToggleLayer }>
                         ham
                     </a>
@@ -48,7 +88,7 @@ const Layout = () => {
                     <button onClick={ handleLanguage }> {viewLang} </button>
                 </div>
             </div>
-            <div className={style.body__box}>
+            <div className={ !isOpened ?  style.body__box : `${style.body__box} ${style.body__box__onlayer}` }>
                 <div className={ !isOpened ? `${style.body__layer} ${style.none}` : style.body__layer  }>
                     <CateLayer />
                 </div>
@@ -60,9 +100,7 @@ const Layout = () => {
                     <DsPage />
                 </UserContext.Provider>
             </div>
-            <div className={style.footer__progressbar}>
-                    footer
-            </div>
+            <div className={ !isOpened ?  style.footer__progressbar : `${style.footer__progressbar} ${style.footer__progressbar__onlayer}` } style={{ width: pgbarWidth}} />
         </div>
     )
 };

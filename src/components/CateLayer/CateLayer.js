@@ -3,8 +3,7 @@ import style from "./CateLayer.module.scss";
 
 const CateLayer = () => {
     return (
-        <div>
-            CateLayer
+        <div className={style.cate_layer__page}>
         </div>
     )
 };
