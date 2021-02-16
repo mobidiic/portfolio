@@ -71,6 +71,7 @@ const Layout = () => {
 
 
     // [todo] footer 프로그레스바 스크롤 위치에 따라 width 변경
+    // -> 변수세팅은 완료, 변수가 useEffect 에 들어가야 함.
 
 
     return (
