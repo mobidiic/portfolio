@@ -7,4 +7,21 @@ div .cate_layer__page {
     height: 100vh;
     background-color: lighten(#7a6661, 50%);
 
+    .cate_layer__upper_bar {
+        display: absolute;
+        width: 80vw;
+        height: 12vh;
+        margin-left: 10vw;
+        border-bottom: 2px solid #7a6661;
+        margin-bottom: 5vh;
+    }
+
+    ul  {
+        .cate_layer__item {
+            padding : 14px;
+            margin-left: 14vw;
+            font-size : 1.2rem;
+        }
+    }
+
 }

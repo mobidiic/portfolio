@@ -38,6 +38,18 @@
     unicode-range: U+0020-007E;
 }
 
+//touch bounce effect 문제
+html {
+    height  : 100%;
+    overflow: hidden;
+    position: relative;
+}
+body {
+    height  : 100%;
+    overflow: auto;
+    position: relative;
+}
+
 .App {
 
     font-family: "Nanum D-DIN";

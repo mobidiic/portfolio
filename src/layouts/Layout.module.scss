@@ -1,5 +1,5 @@
 //변수 할당
-$pb-height: 10px; //프로그레스바 높이
+$pb-height: 3px; //프로그레스바 높이
 
 
 div .header__box {
@@ -26,6 +26,43 @@ div .header__box {
     }
 }
 
+div .body__box {
+
+    padding-top: 50px;
+
+    .body__layer {
+
+    }
+
+
+    .none {
+        display: none !important;
+    }
+
+}
+
+
+div .footer__progressbar {
+    background-color : #7a6661;
+    width: 100vw;
+    height: #{$pb-height};
+
+    position: fixed;
+    z-index: 2;
+    top: calc( 100vh - #{$pb-height} );
+}
+
+
+//onlayer : 카테고리 레이어 펼쳐진 경우
+
+div .body__box__onlayer {
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+
 div .header__box__onlayer {
 
     z-index: 9;
@@ -45,43 +82,6 @@ div .header__box__onlayer {
 
     }
 
-}
-
-
-
-div .body__box {
-
-    padding-top: 50px;
-
-    .body__layer {
-
-    }
-
-
-    .none {
-        display: none !important;
-    }
-
-
-
-}
-
-div .body__box__onlayer {
-    position: fixed;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-}
-
-
-div .footer__progressbar {
-    background-color : #7a6661;
-    width: 100vw;
-    height: #{$pb-height};
-
-    position: fixed;
-    z-index: 2;
-    top: calc( 100vh - #{$pb-height} );
 }
 
 div .footer__progressbar__onlayer {

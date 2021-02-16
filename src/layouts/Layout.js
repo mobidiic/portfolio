@@ -13,8 +13,8 @@ const Layout = () => {
 
     const [ lang, setLang ] = useState("EN");
     const [ isOpened , setIsOpened ] = useState(false);
+    const [ pgbarWidth, setPgbarWidth ] = useState(0);
     const viewLang = lang == "EN" ? "KR" : "EN" ;
-    let pgbarWidth = 0;
 
     const handleLanguage = () => {
         if(lang == "EN"){
@@ -40,13 +40,19 @@ const Layout = () => {
     }, [])
 
     const handleOnScrollClosed = () => {
-        let _scrollY = window.scrollY;
-        let _totalHeight = (document.height !== undefined) ? document.height : document.body.offsetHeight;
+        // let _scrollY = window.scrollY;
+        let _scrollY = document.body.scrollTop;
+        let _totalHeight = (document.height !== undefined) ? document.height : document.body.scrollHeight;
         let _deviceHeight = window.innerHeight;
         let _tgtHeight = _totalHeight - _deviceHeight;
-        pgbarWidth = ( _scrollY / _tgtHeight ) * 100;
-        pgbarWidth += "%";
-        console.log("pgbarWidth : " +  pgbarWidth);
+        let _pgbarWidth = ( _scrollY / _tgtHeight ) * 100;
+        _pgbarWidth += "%";
+        setPgbarWidth(_pgbarWidth);
+        // console.log("_scrollY : " +  _scrollY);
+        // console.log("_totalHeight : " +  _totalHeight);
+        // console.log("_deviceHeight : " +  _deviceHeight);
+        // console.log("_tgtHeight : " +  _tgtHeight);
+        // console.log("_pgbarWidth : " +  _pgbarWidth);
     };
 
     const setOnScrollEventById = (el, func) => {
@@ -69,9 +75,8 @@ const Layout = () => {
 
     // [todo] header 타이틀 스크롤 위치에 따라 변경
 
+    // [todo] 레이어 닫았을 때 스크롤 위치 유지
 
-    // [todo] footer 프로그레스바 스크롤 위치에 따라 width 변경
-    // -> 변수세팅은 완료, 변수가 useEffect 에 들어가야 함.
 
 
     return (
@@ -101,7 +106,7 @@ const Layout = () => {
                     <DsPage />
                 </UserContext.Provider>
             </div>
-            <div className={ !isOpened ?  style.footer__progressbar : `${style.footer__progressbar} ${style.footer__progressbar__onlayer}` } style={{ width: pgbarWidth}} />
+            <div id="" className={ !isOpened ?  style.footer__progressbar : `${style.footer__progressbar} ${style.footer__progressbar__onlayer}` } style={{ width : pgbarWidth}} />
         </div>
     )
 };
