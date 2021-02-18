@@ -1,3 +1,6 @@
+@import "../../Mixin.scss";
+@import "../../Constants.scss";
+
 div .cate_layer__page {
 
     .cate_layer__upper_bar {
@@ -5,16 +8,16 @@ div .cate_layer__page {
         width: 80vw;
         height: 12vh;
         margin-left: 10vw;
-        border-bottom: 1.8px solid #7a6661;
+        border-bottom: 1.9px solid #{$color-cta};
         margin-bottom: 5vh;
     }
 
     ul  {
         .cate_layer__item {
+            @include font-subtitle;
             padding : 14px;
             margin-left: 13vw;
             line-height:1;
-            font-size : rem(15);
             display: block;
 
             &::before {
@@ -22,10 +25,10 @@ div .cate_layer__page {
                 position: absolute;
                 width: 4px;
                 height: 4px;
-                background-color: #262626;
+                background-color: #{$color-text};
                 border-radius: 2px;
                 margin-right: 20px;
-                margin-top: 5px;
+                margin-top: 8px;
                 left: 12vw;
             }
         }

@@ -8,6 +8,7 @@ div .header__box {
     position: fixed;
     display: flex;
     justify-content: space-between;
+    height: #{$hd-height};
 
     .header__menu {
         position: relative;

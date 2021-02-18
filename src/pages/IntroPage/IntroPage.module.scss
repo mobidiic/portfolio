@@ -1,1 +1,56 @@
 @import "../Page.module.scss";
+@import "../../Mixin.scss";
+
+.intro__content{
+
+    height: inherit;
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+
+    .intro__content__title {
+        margin: 20px;
+        @include font-subtitle;
+    }
+
+    .intro__content__visn{
+
+        margin-top: 50px;
+
+        .intro__content__text{
+            text-align: center;
+            margin-top: 40px;
+            font-style: oblique;
+            padding: 30px;
+        }
+    }
+
+    .intro__content__prcp{
+
+        margin-top: 50px;
+
+        ul {
+            margin-top: 40px;
+        }
+
+        ul > li {
+            padding : 14px;
+            margin-left: 13vw;
+            line-height:1;
+            display: block;
+
+            &::before {
+                    content: '';
+                    position: absolute;
+                    width: 4px;
+                    height: 4px;
+                    background-color: #262626;
+                    border-radius: 2px;
+                    margin-right: 20px;
+                    margin-top: 6px;
+                    left: 12vw;
+                }
+        }
+    }
+}

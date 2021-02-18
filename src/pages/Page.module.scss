@@ -5,6 +5,7 @@ div .page__box {
     background-color: #{$color-main};
     width: 100vw;
     height: 100vh;
-    padding-top: 50px;
+    padding-top: #{$hd-height};
     z-index: 2;
+    
 }

@@ -1,0 +1,17 @@
+//import
+@import "./Constants.scss";
+
+//font 
+@mixin font-title {
+    font-family: #{$sans-bold};
+    font-size: 1.5rem;
+}
+@mixin font-subtitle {
+    font-family: #{$sans-regular};
+    font-size: 1.25rem;
+    color: #121212;
+}
+@mixin font-body {
+    font-family: #{$sans-regular};
+    font-size: 1.1rem;
+}

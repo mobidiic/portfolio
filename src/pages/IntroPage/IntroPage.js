@@ -9,23 +9,30 @@ const IntroPage = () => {
 
     const mapToComponent = (principle) => {
         return principle.map((a, i) => (
-            <div key={i}>
+            <li key={i}>
                 {a[lang]}
-            </div>
+            </li>
         ))
     };
 
     return (
         <div className={style.page__box}>
-            <div className={style.page__title}>
-                IntroPage-title
-            </div>
-            <div className={style.page__contents}>
-                <div>
-                    { ID.vision[lang] }
+            <div className={style.intro__content}>
+                <div className={style.intro__content__visn}>
+                    <div className={style.intro__content__title}>
+                        Vision
+                    </div>
+                    <div className={style.intro__content__text}>
+                        " { ID.vision[lang] } "
+                    </div>
                 </div>
-                <div>
-                    { mapToComponent(ID.principle) }
+                <div className={style.intro__content__prcp}>
+                    <div className={style.intro__content__title}>
+                        Principle
+                    </div>
+                    <ul>
+                        { mapToComponent(ID.principle) }
+                    </ul>
                 </div>
             </div>
         </div>

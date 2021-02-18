@@ -1,5 +1,6 @@
 @import "./Reset.scss";
 @import "./Constants.scss";
+@import "./Mixin.scss";
 
 // font
 @font-face {
@@ -39,7 +40,7 @@ body {
 }
 
 .App {
-    font-family: #{$sans-regular};
+    @include font-body;
     background-color: #{$color-main};
     color: #{$color-text};
 }
