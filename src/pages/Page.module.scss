@@ -1,3 +1,10 @@
+@import "../Constants.scss";
+
 div .page__box {
-    color : #555555;
+    color : #{$color-text};
+    background-color: #{$color-main};
+    width: 100vw;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
 }

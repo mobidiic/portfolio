@@ -1,5 +1,5 @@
-//변수 할당
-$pb-height: 3px; //프로그레스바 높이
+//import constant
+@import "../Constants.scss";
 
 
 div .header__box {
@@ -23,7 +23,7 @@ div .header__box {
             height: 2px;
             margin-top: 4px;
             width: 18px;
-            background-color: #231916;
+            background-color: #{$color-menu};
             -webkit-transition: all .3s ease-in-out;
             transition: all .3s ease-in-out;
         }
@@ -31,7 +31,7 @@ div .header__box {
 
     .header__title {
 
-        font-family: "GothicA1 D-DIN bold";
+        font-family: #{$sans-bold};
         padding: 10px;
         position: relative;
         top: 0;
@@ -63,7 +63,7 @@ div .header__box {
             span {
                 display: block;
                 height: 2px;
-                background-color: #231916;
+                background-color: #{$color-menu};
             }
     
             span:nth-child(1) {
@@ -98,8 +98,6 @@ div .header__box {
 
 div .body__box {
 
-    padding-top: 50px;
-
     .body__layer {
         position: absolute;
         left: 0;
@@ -109,8 +107,7 @@ div .body__box {
         position: absolute;
         top: 0;
         left: 0;
-        // background-color: lighten(#7a6661, 50%);
-        background-color: #f6f4f1;
+        background-color: #{$color-main};
         -webkit-transition: all .4s ease-in-out;
         transition: all .4s ease-in-out;
     }
@@ -134,7 +131,7 @@ div .body__box {
 
 
 div .footer__progressbar {
-    background-color : #7a6661;
+    background-color : #{$color-cta};
     width: 100vw;
     height: #{$pb-height};
 

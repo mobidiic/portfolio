@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useLayoutEffect, useState } from "react";
 import TitlePage from "../pages/TitlePage/TitlePage";
 import IntroPage from "../pages/IntroPage/IntroPage";
 import SkillTable from "../pages/SkillTable/SkillTable";
@@ -14,6 +14,7 @@ const Layout = () => {
     const [ lang, setLang ] = useState("EN");
     const [ isOpened , setIsOpened ] = useState(false);
     const [ pgbarWidth, setPgbarWidth ] = useState(0);
+    const [ curScrollHeight, setCurScrollHeight ] = useState(0);
     const viewLang = lang == "EN" ? "KR" : "EN" ;
 
     const handleLanguage = () => {
@@ -27,9 +28,12 @@ const Layout = () => {
     const handleToggleLayer = () => {
         setIsOpened(!isOpened);
         if( !isOpened ) {
-            setOnScrollEventById("layout__body", handleOnScrollOpened)
+            setCurScrollHeight(document.body.scrollTop);
+            setOnScrollEventById("layout__body", handleOnScrollOpened);
         } else {
-            removeOnScrollEventById("layout__body", handleOnScrollOpened)
+            removeOnScrollEventById("layout__body", handleOnScrollOpened);
+            moveScrollTo2(0,curScrollHeight);
+            document.querySelector('body').scrollTo(0,curScrollHeight);
         }
     };
 
@@ -40,6 +44,7 @@ const Layout = () => {
     }, [])
 
     const handleOnScrollClosed = () => {
+        //progress bar
         // let _scrollY = window.scrollY;
         let _scrollY = document.body.scrollTop;
         let _totalHeight = (document.height !== undefined) ? document.height : document.body.scrollHeight;
@@ -67,11 +72,17 @@ const Layout = () => {
         document.getElementById(el).removeEventListener('mousewheel', func);
     };
 
+    const moveScrollTo = useCallback((x,y) => {
+        document.querySelector('#layout__body').scrollTo(x,y);
+    }, []);
+
+    const moveScrollTo2 = (x,y) => {
+        document.querySelector('#layout__body').scrollTo(x,y);
+    };
+
     useEffect(()=> {
         setOnScrollEventById("layout__body", handleOnScrollClosed);
     }, []);
-
-    // [todo] header 타이틀 스크롤 위치에 따라 변경
 
     // [todo] 레이어 닫았을 때 스크롤 위치 유지
 
@@ -86,7 +97,7 @@ const Layout = () => {
                     <span />
                 </div>
                 <div className={style.header__title}>
-                    header-title
+                    CEAN's PF
                 </div>
                 <div className={style.header__button}>
                     <button onClick={ handleLanguage }> {viewLang} </button>

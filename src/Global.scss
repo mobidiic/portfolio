@@ -1,27 +1,27 @@
-//reset css
 @import "./Reset.scss";
+@import "./Constants.scss";
 
 // font
 @font-face {
-    font-family: "GothicA1 D-DIN";
+    font-family: #{$sans-regular};
     src: url("./assets/fonts/GothicA1-Light.ttf") format('truetype');
 }
 
 @font-face {
     //(영어, 숫자, 특수문자)인 경우 D-DIN 폰트 사용
-    font-family: "GothicA1 D-DIN";
+    font-family: #{$sans-regular};
     src: url("./assets/fonts/D-DIN.ttf") format('truetype');
     unicode-range: U+0020-007E;
 }
 
 @font-face {
-    font-family: "GothicA1 D-DIN bold";
+    font-family: #{$sans-bold};
     src: url("./assets/fonts/GothicA1-SemiBold.ttf") format('truetype');
 }
 
 @font-face {
     //(영어, 숫자, 특수문자)인 경우 D-DIN 폰트 사용
-    font-family: "GothicA1 D-DIN bold";
+    font-family: #{$sans-bold};
     src: url("./assets/fonts/D-DIN-Bold.ttf") format('truetype');
     unicode-range: U+0020-007E;
 }
@@ -39,16 +39,7 @@ body {
 }
 
 .App {
-
-    font-family: "GothicA1 D-DIN";
-    background-color: #f6f4f1;
-    color: #262626;
-
-    .header__contents {
-    }
-
-    .body__contents {
-    }
-
-
+    font-family: #{$sans-regular};
+    background-color: #{$color-main};
+    color: #{$color-text};
 }
