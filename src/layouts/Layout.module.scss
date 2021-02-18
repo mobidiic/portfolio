@@ -10,19 +10,89 @@ div .header__box {
     justify-content: space-between;
 
     .header__menu {
+        position: relative;
+        left: 0%;
         padding: 10px;
+        width: 18px;
+        height: 18px;
+        -webkit-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+
+        span {
+            display: block;
+            height: 2px;
+            margin-top: 4px;
+            width: 18px;
+            background-color: #231916;
+            -webkit-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+        }
     }
-    
+
     .header__title {
 
         font-family: "GothicA1 D-DIN bold";
         padding: 10px;
+        position: relative;
+        top: 0;
+        -webkit-transition: all .55s ease-in-out;
+        transition: all .55s ease-in-out;
 
     }
 
     .header__button {
         padding: 10px;
+        position: relative;
+        top: 0;
+        -webkit-transition: all .55s ease-in-out;
+        transition: all .55s ease-in-out;
+    }
 
+    &.header__box__onlayer {
+
+        z-index: 9;
+    
+        .header__menu {
+            position: relative;
+            padding: 10px;
+            left: 87%;
+            width: 18px;
+            height: 18px;
+            padding-top: 12px;
+    
+            span {
+                display: block;
+                height: 2px;
+                background-color: #231916;
+            }
+    
+            span:nth-child(1) {
+                -webkit-transform: rotate(-135deg);
+                transform: rotate(-135deg);
+                margin-top: 8px;
+            }
+    
+            span:nth-child(2) {
+                margin-left: 100px;
+                opacity: 0;
+            }
+            span:nth-child(3) {
+                margin-top: -8px;
+                -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+            }
+        }
+
+        .header__title {
+            position: relative;
+            top: -50px;
+        }
+    
+        .header__button {
+            position: relative;
+            top: -50px;
+        }
+    
     }
 }
 
@@ -31,12 +101,33 @@ div .body__box {
     padding-top: 50px;
 
     .body__layer {
-
+        position: absolute;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 3;
+        position: absolute;
+        top: 0;
+        left: 0;
+        // background-color: lighten(#7a6661, 50%);
+        background-color: #f6f4f1;
+        -webkit-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
     }
 
 
     .none {
-        display: none !important;
+        position: absolute;
+        left: -100%;
+        -webkit-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+    }
+
+    &.body__box__onlayer {
+        position: fixed;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
     }
 
 }
@@ -50,40 +141,13 @@ div .footer__progressbar {
     position: fixed;
     z-index: 2;
     top: calc( 100vh - #{$pb-height} );
-}
 
-
-//onlayer : 카테고리 레이어 펼쳐진 경우
-
-div .body__box__onlayer {
-    position: fixed;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-}
-
-
-div .header__box__onlayer {
-
-    z-index: 9;
-
-    .layer__button_close {
-        color: red;
-        padding: 10px;
-    }
-
-    .header__title {
+    &.footer__progressbar__onlayer {
         display: none;
-
     }
-
-    .header__button {
-        display: none;
-
-    }
-
 }
 
-div .footer__progressbar__onlayer {
-    display: none;
-}
+
+
+
+

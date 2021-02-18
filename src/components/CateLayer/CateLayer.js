@@ -8,10 +8,10 @@ const CateLayer = () => {
         <div className={style.cate_layer__page}>
             <div className={style.cate_layer__upper_bar} />
             <ul className={style.cate_layer__list_box}>
-                <li className={style.cate_layer__item} >🥐 Profile</li>
-                <li className={style.cate_layer__item} >🥖 Medium</li>
-                <li className={style.cate_layer__item} >🥨 Mail</li>
-                <li className={style.cate_layer__item} >🥯 Phone</li>
+                <li className={style.cate_layer__item} >Profile</li>
+                <li className={style.cate_layer__item} >Medium</li>
+                <li className={style.cate_layer__item} >Mail</li>
+                <li className={style.cate_layer__item} >Phone</li>
             </ul>
         </div>
     )

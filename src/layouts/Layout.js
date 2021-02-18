@@ -71,8 +71,6 @@ const Layout = () => {
         setOnScrollEventById("layout__body", handleOnScrollClosed);
     }, []);
 
-    // [todo] 카테고리레이어 호출 시 햄버거메뉴 닫기버튼으로 전환 + 애니메이션 추가
-
     // [todo] header 타이틀 스크롤 위치에 따라 변경
 
     // [todo] 레이어 닫았을 때 스크롤 위치 유지
@@ -82,10 +80,10 @@ const Layout = () => {
     return (
         <div id="layout__body">
             <div className={ !isOpened ?  style.header__box : `${style.header__box} ${style.header__box__onlayer}` } >
-                <div className={ !isOpened ?  style.header__menu : style.layer__button_close } >
-                    <a onClick={ handleToggleLayer }>
-                        ham
-                    </a>
+                <div className={style.header__menu} onClick={ handleToggleLayer } >
+                    <span />
+                    <span />
+                    <span />
                 </div>
                 <div className={style.header__title}>
                     header-title

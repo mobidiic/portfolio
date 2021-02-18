@@ -1,14 +1,7 @@
 div .cate_layer__page {
-    z-index: 3;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: lighten(#7a6661, 50%);
 
     .cate_layer__upper_bar {
-        display: absolute;
+        position: relative;
         width: 80vw;
         height: 12vh;
         margin-left: 10vw;
@@ -19,9 +12,24 @@ div .cate_layer__page {
     ul  {
         .cate_layer__item {
             padding : 14px;
-            margin-left: 14vw;
-            font-size : 1.2rem;
+            margin-left: 13vw;
+            line-height:1;
+            font-size : rem(15);
+            display: block;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 4px;
+                height: 4px;
+                background-color: #262626;
+                border-radius: 2px;
+                margin-right: 20px;
+                margin-top: 5px;
+                left: 12vw;
+            }
         }
+
     }
 
 }
