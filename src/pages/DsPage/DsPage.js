@@ -10,7 +10,7 @@ const DsPage = () => {
             <div className={style.ds__contents}>
                 <div className={style.ds__color_palette}>
                     <div className={style.ds__subtitle}>
-                        color palette
+                        <span>color palette</span>
                     </div>
                     <div className={style.ds__color_box_set}>
                         <div className={style.ds__color_box}>
@@ -35,7 +35,7 @@ const DsPage = () => {
                 </div>
                 <div className={style.ds__font_box}>
                     <div className={style.ds__subtitle}>
-                        font style
+                        <span>font style</span>
                     </div>
                     <div className={style.ds__font_box_set}>
                         <div className={style.ds__font_box__title}>

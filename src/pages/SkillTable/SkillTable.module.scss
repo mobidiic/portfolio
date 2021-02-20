@@ -1,1 +1,37 @@
 @import "../Page.module.scss";
+@import "../../Mixin.scss";
+@import "../../Constants.scss";
+
+.s_table__title {
+    @include font-title;
+    margin: 50px;
+    margin-left: 20px;
+}
+
+.s_table__contents {
+
+    thead {
+        border-bottom: 1px solid $color-cta;
+
+        tr > th {
+            padding-bottom: 20px;
+        }
+    }
+
+    tr > th {
+        padding : 10px;
+        padding-top: 15px;
+
+    }
+
+    tbody {
+        text-align: center;
+
+        td > img {
+            width: 30px;
+            height: auto;
+        }
+    }
+
+}
+

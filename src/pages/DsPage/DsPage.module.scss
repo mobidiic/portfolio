@@ -21,7 +21,9 @@
 .ds__subtitle {
     @include font-subtitle;
     margin: 20px;
-    margin-top: 40px;
+    margin-top: 60px;
+    border-bottom: 2px solid $color-cta;
+    height: 2rem;
 }
 
 .ds__color_box_set {
