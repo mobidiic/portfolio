@@ -14,8 +14,6 @@
 
 .ds__title {
     @include font-title;
-    margin: 50px;
-    margin-left: 20px;
 }
 
 .ds__subtitle {
@@ -59,6 +57,7 @@
 
     .ds__font_box__title {
         @include font-title;
+        margin: 0;
     }
     .ds__font_box__subtitle {
         @include font-subtitle;

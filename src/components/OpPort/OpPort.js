@@ -2,28 +2,56 @@ import React from "react";
 import style from "./OpPort.module.scss";
 
 const OpPort = (work) => {
+
+    const mapToListing = (list) => {
+        return list.map((a, i) => {
+            return (
+                <li key={i}>
+                    {a}
+                </li>
+            )
+        })
+    };
+
     return (
-        <div>
-            <div>
+        <div className={style.page__box}>
+            <div className={style.op__title}>
                 {work.title}
             </div>
-            <div>
-                {work.startDtime}
+            <div className={style.op__dtime}>
+                <div className={style.op__dtime_start}>
+                    {work.startDtime}
+                </div>
+                <div className={style.op__dtime_start_end}>
+                    {work.endDtime}
+                </div>
             </div>
-            <div>
-                {work.endDtime}
+            <div className={style.op__image}>
+                <img src={work.images} />
             </div>
-            <div>
-                {work.images}
+            <div className={style.op__desc_box}>
+                <div className={style.op__desc_subtitle}>
+                    Role
+                </div>
+                <div className={style.op__desc_cont}>
+                    {work.role}
+                </div>
             </div>
-            <div>
-                {work.role}
+            <div className={style.op__desc_box}>
+                <div className={style.op__desc_subtitle}>
+                    Description
+                </div>
+                <ul className={style.op__desc_cont}>
+                    {mapToListing(work.description)}
+                </ul>
             </div>
-            <div>
-                {work.description}
-            </div>
-            <div>
-                {work.keyLogs}
+            <div className={style.op__desc_box}>
+                <div className={style.op__desc_subtitle}>
+                    Key Logs
+                </div>
+                <ul className={style.op__desc_cont}>
+                    {mapToListing(work.keyLogs)}
+                </ul>
             </div>
         </div>
     )

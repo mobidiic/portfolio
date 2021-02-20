@@ -5,6 +5,8 @@
 @mixin font-title {
     font-family: #{$sans-bold};
     font-size: 1.5rem;
+    margin: 50px;
+    margin-left: 20px;
 }
 @mixin font-subtitle {
     font-family: #{$sans-regular};

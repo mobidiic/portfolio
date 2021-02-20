@@ -1,0 +1,55 @@
+@import "../../Mixin.scss";
+@import "../../Constants.scss";
+@import "../../pages/Page.module.scss";
+
+.page__box {
+    padding: 0;
+}
+
+.pr__title {
+    @include font-subtitle;
+    margin: 20px;
+}
+
+.pr__dtime {
+    display: flex;
+    justify-content: space-between;
+    padding : 10px;
+    color: $color-cta;
+}
+
+.pr__desc_box {
+    margin: 20px;
+
+    .pr__desc_subtitle {
+        padding: 10px;
+        color: $color-cta;
+
+        &::after {
+            content: ' - ';
+        }
+    }
+
+    .pr__desc_cont {
+        padding: 10px;
+        padding-left: 10vw;
+    }
+
+    ul > li{
+
+        margin-bottom: 1rem;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background-color: #{$color-text};
+            border-radius: 2px;
+            margin-right: 20px;
+            margin-tpr: 8px;
+            left: 10vw;
+        }
+
+    }
+}

@@ -9,6 +9,7 @@ $height-cont: 200px;
 .title__contents {
 
     @include font-title;
+    margin: 0;
     position: relative;
     width: #{$width-cont};
     height: #{$height-cont};

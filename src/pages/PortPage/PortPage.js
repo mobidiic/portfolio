@@ -59,11 +59,11 @@ const PortPage = () => {
     }
 
     return (
-        <div className={style.page__box}>
-            <div className={style.page__title}>   
-                PortPage
+        <div>
+            <div className={style.port__title}>   
+                Career
             </div>
-            <div className={style.page__contents}>
+            <div className={style.port__contents}>
                 {mapToWorkComponent(services)}
             </div>
         </div>

@@ -5,8 +5,8 @@
                 "KR" : "롯데프레시 운영",
                 "EN" : "Lottefresh Service Ops"
             },
-            "start_dtime" : "201902",
-            "end_dtime" : "202011",
+            "start_dtime" : "2019.02",
+            "end_dtime" : "2020.11",
             "type" : "OPS",
             "details" : {
                 "images" : [],
@@ -31,7 +31,7 @@
                 "key_logs" : {
                     "KR" : [
                         "종속상품재고통합 - 결품율 2%p 감소",
-                        "새벽배송권역 확장 - 새벽베송매출 13% 증가"
+                        "새벽배송권역 확장 - 새벽배송매출 13% 증가"
                     ],
                     "EN" : [
                         "Depended product stock integration - 3%p decrease in sold-out rate",
@@ -45,8 +45,8 @@
                 "KR" : "기가지니 GPAY 프로젝트",
                 "EN" : "KT Gigagenie Gpay Prj"
             },
-            "start_dtime" : "201904",
-            "end_dtime" : "201909",
+            "start_dtime" : "2019.04",
+            "end_dtime" : "2019.09",
             "type" : "PRJ",
             "details" : {
                 "images" : [],
@@ -81,8 +81,8 @@
                 "KR" : "롯데ON-롯데프레시 통합 프로젝트",
                 "EN" : "LotteON-Lottefresh Merging Prj"
             },
-            "start_dtime" : "201904",
-            "end_dtime" : "201909",
+            "start_dtime" : "2020.06",
+            "end_dtime" : "2020.11",
             "type" : "PRJ",
             "details" : {
                 "images" : [],
@@ -92,11 +92,11 @@
                 },
                 "object" : {
                     "KR" : "롯데ON-롯데프레시 서비스 통합",
-                    "EN" : "LotteON-Lottefresh service integration"
+                    "EN" : "LotteON-Lottefresh Service Integration"
                 },
                 "outcomes" : {
                     "KR" : "적시 양품 반영, 확장성 고려한 구조개선",
-                    "EN" : "In Time with appropriate Service level, and renewal to scalable structure"
+                    "EN" : "Open Successfully In Time with appropriate Service level, and Renewal to Scalable Structure"
                 },
                 "learned" : {
                     "KR" : [
@@ -115,7 +115,7 @@
                 "KR" : "롯데ON 전시 운영",
                 "EN" : "LotteOn Display Ops"
             },
-            "start_dtime" : "202012",
+            "start_dtime" : "2020.12",
             "end_dtime" : "",
             "type" : "OPS",
             "details" : {
