@@ -8,12 +8,23 @@
 
 .s_table__contents {
 
+    table {
+        margin: auto;   
+    }
+
     thead {
-        border-bottom: 1px solid $color-cta;
+        height: 100px;
+        padding: auto;
 
         tr > th {
+            padding: 0;
             padding-bottom: 20px;
+            width: 80px;
         }
+    }
+
+    tbody {
+        border-top: 1px solid $color-cta;
     }
 
     tr > th {

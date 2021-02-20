@@ -1,10 +1,18 @@
-@import "../Page.module.scss";
 @import "../../Constants.scss";
 @import "../../Mixin.scss";
 
 // 변수 설정
 $width-cont: 400px;
 $height-cont: 200px;
+
+.title__box {
+    color : #{$color-text};
+    background-color: #{$color-main};
+    width: 100vw;
+    height: 100vh;
+    padding-top: #{$hd-height};
+    z-index: 2;
+}
 
 .title__contents {
 

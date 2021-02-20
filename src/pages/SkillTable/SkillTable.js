@@ -13,9 +13,9 @@ const SkillTable = () => {
                     <thead>
                         <tr>
                             <th scope="col">Skills</th>
-                            <th scope="col">Basic</th>
-                            <th scope="col">Intermediate</th>
-                            <th scope="col">Advanced</th>
+                            <th scope="col">BASIC</th>
+                            <th scope="col">INTERM</th>
+                            <th scope="col">ADV</th>
                         </tr>
                     </thead>
                     <tbody>
