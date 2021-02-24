@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import style from "./OpPort.module.scss";
 
 const OpPort = (work) => {
+
+    const [image, setImage] = useState("");
+
+    useEffect(()=>{
+        import(`../../assets/images/${work.images}`).then(image => {
+            setImage(image.default);
+        });
+    },[]);
 
     const mapToListing = (list) => {
         return list.map((a, i) => {
@@ -27,7 +35,7 @@ const OpPort = (work) => {
                 </div>
             </div>
             <div className={style.op__image}>
-                <img src={work.images} />
+                <img src={image} />
             </div>
             <div className={style.op__desc_box}>
                 <div className={style.op__desc_subtitle}>

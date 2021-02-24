@@ -14,9 +14,14 @@
         @include font-subtitle;
     }
 
+    .intro__img > img {
+        width: 100vw;
+        height: auto;
+    }
+
     .intro__content__visn{
 
-        margin-top: 50px;
+        margin-top: 20px;
 
         .intro__content__text{
             text-align: center;

@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import style from "./IntroPage.module.scss";
 import { UserContext } from "../../layouts/Layout";
 import ID from "../../assets/data/Introduction.json";
+import img from "../../assets/images/pf_img_main.png";
 
 const IntroPage = () => {
 
@@ -18,6 +19,9 @@ const IntroPage = () => {
     return (
         <div className={style.page__box}>
             <div className={style.intro__content}>
+                <div className={style.intro__img}>
+                    <img src={img} />
+                </div>
                 <div className={style.intro__content__visn}>
                     <div className={style.intro__content__title}>
                         Vision

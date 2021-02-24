@@ -7,15 +7,6 @@ div .page__box {
     height: auto;
     padding-top: #{$hd-height};
     z-index: 2;
-}
-
-@media screen and (min-height: 568px) {
-    div .page__box {
-        color : #{$color-text};
-        background-color: #{$color-main};
-        width: 100vw;
-        height: 100vh;
-        padding-top: #{$hd-height};
-        z-index: 2;
-    }
+    margin-top: 50px;
+    margin-bottom: 50px;
 }

@@ -26,12 +26,6 @@ const SkillTable = () => {
                             <td><img src={Check} /></td>
                         </tr>
                         <tr>
-                            <th scope="row">MS Office</th>
-                            <td>-</td>
-                            <td>-</td>
-                            <td><img src={Check} /></td>
-                        </tr>
-                        <tr>
                             <th scope="row">SQL / GA</th>
                             <td>-</td>
                             <td><img src={Check} /></td>
@@ -45,12 +39,6 @@ const SkillTable = () => {
                         </tr>
                         <tr>
                             <th scope="row">Javascript / React</th>
-                            <td>-</td>
-                            <td><img src={Check} /></td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">RDBMS / NoSQL</th>
                             <td>-</td>
                             <td><img src={Check} /></td>
                             <td>-</td>

@@ -59,7 +59,7 @@ const PortPage = () => {
     }
 
     return (
-        <div>
+        <div className={style.port__box}>
             <div className={style.port__title}>   
                 Career
             </div>

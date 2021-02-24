@@ -101,12 +101,9 @@ div .body__box {
 
     .body__layer {
         position: absolute;
-        left: 0;
+        z-index: 3;
         width: 100vw;
         height: 100vh;
-        z-index: 3;
-        position: absolute;
-        top: 0;
         left: 0;
         background-color: #{$color-main};
         -webkit-transition: all .4s ease-in-out;

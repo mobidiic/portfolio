@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import style from "./PrPort.module.scss";
 
 const PrPort = (work) => {
+
+    const [image, setImage] = useState("");
+
+    useEffect(()=>{
+        import(`../../assets/images/${work.images}`).then(image => {
+            setImage(image.default);
+        });
+    },[]);
 
     const mapToListing = (list) => {
         return list.map((a, i) => {
@@ -27,7 +35,7 @@ const PrPort = (work) => {
                 </div>
             </div>
             <div className={style.pr__image}>
-                <img src={work.images} />
+                <img src={image} />
             </div>
             <div className={style.pr__desc_box}>
                 <div className={style.pr__desc_subtitle}>

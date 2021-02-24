@@ -3,4 +3,10 @@
 .port__title {
     @include font-title;
     margin-bottom: 0;
+    padding-top: 100px;
+}
+
+.port__box {
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
