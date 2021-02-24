@@ -49,7 +49,7 @@
             "end_dtime" : "2019.09",
             "type" : "PRJ",
             "details" : {
-                "images" : "pf_img_pj_1.png",
+                "images" : "pf_img_pr_1.png",
                 "role" : {
                     "KR" : "PM",
                     "EN" : "PM"
@@ -85,7 +85,7 @@
             "end_dtime" : "2020.11",
             "type" : "PRJ",
             "details" : {
-                "images" : "pf_img_pj_2.png",
+                "images" : "pf_img_pr_2.png",
                 "role" : {
                     "KR" : "회원, 판촉/이벤트, 배송/클레임, O4O 모듈 개발PM",
                     "EN" : "TPM of Member, Promotion/Event, Delivery/Customer Claim, O4O Services"

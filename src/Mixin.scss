@@ -7,13 +7,33 @@
     font-size: 1.5rem;
     margin: 50px;
     margin-left: 20px;
+
+    @media screen and (min-width: 768px) { 
+        font-family: #{$sans-bold};
+        font-size: 1.5rem;
+        margin: 50px;
+        margin-left: 2vw;
+    }
+
 }
 @mixin font-subtitle {
     font-family: #{$sans-regular};
-    font-size: 1.25rem;
+    font-size: 1.32rem;
     color: #121212;
+
+    @media screen and (min-width: 768px) { 
+        font-family: #{$sans-regular};
+        font-size: 1.4rem;
+        color: #121212;
+    }
 }
 @mixin font-body {
     font-family: #{$sans-regular};
     font-size: 1.1rem;
+
+    @media screen and (min-width: 768px) { 
+        font-family: #{$sans-regular};
+        font-size: 1.2rem;
+    }
 }
+

@@ -4,8 +4,8 @@
 
 .page__box {
     padding: 0;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
     margin-top: 0;
 }
 
@@ -19,6 +19,12 @@
     justify-content: space-between;
     padding : 10px;
     color: $color-cta;
+
+    @media screen and (min-width: 768px) { 
+        padding-left: 40px; 
+        padding-right: 40px;
+        font-size: 1.3rem;
+    }
 }
 
 .op__image > img {

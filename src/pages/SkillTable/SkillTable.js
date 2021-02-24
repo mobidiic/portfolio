@@ -4,7 +4,7 @@ import Check from "../../assets/icons/check_icon.png"
 
 const SkillTable = () => {
     return (
-        <div className={style.page__box}>
+        <div className={style.s_table__box}>
             <div className={style.s_table__title}>
                 Skill Table
             </div>

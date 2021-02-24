@@ -2,16 +2,29 @@
 @import "../../Mixin.scss";
 @import "../../Constants.scss";
 
+.s_table__box {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
 .s_table__title {
     @include font-title;
+    padding-top: 50px;
+    padding-bottom: 20px;
 }
 
 .s_table__contents {
 
+    padding-bottom: 50px;
+
     table {
         margin: auto;   
-    }
 
+        @media screen and (min-width: 768px) { 
+            width: 60vw;
+        }
+
+    }
     thead {
         height: 100px;
         padding: auto;
@@ -30,7 +43,6 @@
     tr > th {
         padding : 10px;
         padding-top: 15px;
-
     }
 
     tbody {
