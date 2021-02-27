@@ -27,9 +27,9 @@ const Layout = () => {
     const handleToggleLayer = () => {
         setIsOpened(!isOpened);
         if( !isOpened ) {
-            setOnScrollEventById("layout__body", handleOnScrollOpened);
+            setOnScrollEvent(handleOnScrollOpened);
         } else {
-            removeOnScrollEventById("layout__body", handleOnScrollOpened);
+            removeOnScrollEvent(handleOnScrollOpened);
         }
     };
 
@@ -50,21 +50,23 @@ const Layout = () => {
         setPgbarWidth(_pgbarWidth);
     };
 
-    const setOnScrollEventById = (el, func) => {
-        document.getElementById(el).addEventListener('scroll', func);
-        document.getElementById(el).addEventListener('touchmove', func);
-        document.getElementById(el).addEventListener('mousewheel', func);
+    const setOnScrollEvent = (func) => {
+        window.addEventListener('touchmove', func);
+        window.addEventListener('mousewheel', func);
+        window.addEventListener('scroll', func);
     };
 
-    const removeOnScrollEventById = (el, func) => {
-        document.getElementById(el).removeEventListener('scroll', func);
-        document.getElementById(el).removeEventListener('touchmove', func);
-        document.getElementById(el).removeEventListener('mousewheel', func);
+    const removeOnScrollEvent = (func) => {
+        window.removeEventListener('scroll', func);
+        window.removeEventListener('touchmove', func);
+        window.removeEventListener('mousewheel', func);
     };
 
     useEffect(()=> {
-        setOnScrollEventById("layout__body", handleOnScrollClosed);
-    }, []);
+        setOnScrollEvent(handleOnScrollClosed);
+
+        return () => removeOnScrollEvent(handleOnScrollClosed);
+    });
 
     return (
         <div id="layout__body" >
