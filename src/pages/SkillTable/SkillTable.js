@@ -1,8 +1,12 @@
 import React from "react";
 import style from "./SkillTable.module.scss";
-import Check from "../../assets/icons/check_icon.png"
+import BarScale from "../../components/modules/BarScale/BarScale";
+
 
 const SkillTable = () => {
+
+    const totalScore = 5;
+
     return (
         <div className={style.s_table__box}>
             <div className={style.s_table__title}>
@@ -10,38 +14,98 @@ const SkillTable = () => {
             </div>
             <div className={style.s_table__contents}>
                 <table>
+                    <caption>- Managing</caption>
                     <thead>
                         <tr>
                             <th scope="col">Skills</th>
-                            <th scope="col">BASIC</th>
-                            <th scope="col">INTERM</th>
-                            <th scope="col">ADV</th>
+                            <th scope="col">Score</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <th scope="row">Jira / Confluence</th>
-                            <td>-</td>
-                            <td>-</td>
-                            <td><img src={Check} /></td>
+                            <th scope="row">
+                                Documents<br/>
+                                <span>Jira, Confluence</span>
+                            </th>
+                            <td>
+                                <BarScale score={4} totalScore={totalScore} />
+                            </td>
                         </tr>
                         <tr>
-                            <th scope="row">SQL / GA</th>
-                            <td>-</td>
-                            <td><img src={Check} /></td>
-                            <td>-</td>
+                            <th scope="row">
+                                Cloud<br/>
+                                <span>AWS</span>
+                            </th>
+                            <td>
+                                <BarScale score={3} totalScore={totalScore} />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <caption>- Develop</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Skills</th>
+                            <th scope="col">Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">
+                                Front-End<br/>
+                                <span>JS, React</span>
+                            </th>
+                            <td>
+                                <BarScale score={3} totalScore={totalScore} />
+                            </td>
                         </tr>
                         <tr>
-                            <th scope="row">Java / Spring</th>
-                            <td>-</td>
-                            <td><img src={Check} /></td>
-                            <td>-</td>
+                            <th scope="row">
+                                Back-End<br/>
+                                <span>Java, Spring</span>
+                            </th>
+                            <td>
+                                <BarScale score={4} totalScore={totalScore} />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <caption>- Data</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Skills</th>
+                            <th scope="col">Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">
+                                Modeling<br/>
+                                <span>RDBMS, NoSQL</span>
+                            </th>
+                            <td>
+                                <BarScale score={3} totalScore={totalScore} />
+                            </td>
                         </tr>
                         <tr>
-                            <th scope="row">Javascript / React</th>
-                            <td>-</td>
-                            <td><img src={Check} /></td>
-                            <td>-</td>
+                            <th scope="row">
+                                Extract<br/>
+                                <span>SQL, GA</span>
+                            </th>
+                            <td>
+                                <BarScale score={4} totalScore={totalScore} />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                Visualizing<br/>
+                                <span>D3, Python</span>
+                            </th>
+                            <td>
+                                <BarScale score={2} totalScore={totalScore} />
+                            </td>
                         </tr>
                     </tbody>
                 </table>

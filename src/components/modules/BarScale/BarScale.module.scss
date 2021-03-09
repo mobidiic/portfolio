@@ -1,0 +1,19 @@
+@import "../../../Constants.scss";
+
+.scale__box {
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 0;
+
+
+    .scale__number {
+        padding-right: 12px;
+    }
+
+    .scale__bar {
+        background-color: $color-cta;
+        height: 4px;
+    }
+}

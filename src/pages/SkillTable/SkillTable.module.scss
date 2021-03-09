@@ -19,25 +19,40 @@
 
     table {
         margin: auto;   
+        width: 80vw;
+        margin-bottom: 30px;
 
         @media screen and (min-width: 768px) { 
             width: 60vw;
         }
 
     }
+
+    table > caption {
+        text-align: left;
+        position: relative;
+        left: -4vw;
+        margin-bottom: 22px;
+    }
+
     thead {
         height: 100px;
         padding: auto;
 
         tr > th {
             padding: 0;
-            padding-bottom: 20px;
+            padding-bottom: 12px;
             width: 80px;
         }
     }
 
     tbody {
         border-top: 1px solid $color-cta;
+
+        span {
+            font-size: 0.9rem;
+            color: lighten($color-text, 40%);
+        }
     }
 
     tr > th {

@@ -92,7 +92,6 @@ const Layout = () => {
                     <IntroPage />
                     <SkillTable />
                     <PortPage />
-                    <DsPage />
                 </UserContext.Provider>
             </div>
             <div className={ !isOpened ?  style.footer__progressbar : `${style.footer__progressbar} ${style.footer__progressbar__onlayer}` } style={{ width : pgbarWidth}} />
