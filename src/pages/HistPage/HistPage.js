@@ -1,0 +1,36 @@
+import React, { useContext } from "react";
+import style from "./HistPage.module.scss";
+import { UserContext } from "../../layouts/Layout";
+import WE from "../../assets/data/WorkExperience.json";
+
+const HistPage = () => {
+
+    const lang = useContext(UserContext).lang;
+    const services = WE.services;
+
+    const mapToComponent = (work) => {
+        return work.map((a, i) => (
+            <div key={i}>
+                <div className={style.hist__list_title}>
+                    {a.title[lang]}
+                </div>
+                <div className={style.hist__list_date}>
+                    {a.start_dtime} - {a.end_dtime}
+                </div>
+            </div>
+        ))
+    };
+
+    return (
+        <div className={style.hist__box}>
+            <div className={style.hist__title}>
+                Working History
+            </div>
+            <div className={style.hist__list}>
+                {mapToComponent(services)}
+            </div>
+        </div>
+    )
+};
+
+export default HistPage;

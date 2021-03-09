@@ -6,6 +6,8 @@ import PortPage from "../pages/PortPage/PortPage";
 import DsPage from "../pages/DsPage/DsPage";
 import CateLayer from "../components/CateLayer/CateLayer"
 import style from "./Layout.module.scss";
+import ByePage from "../pages/ByePage/ByePage";
+import HistPage from "../pages/HistPage/HistPage";
 
 export const UserContext = React.createContext();
 
@@ -92,6 +94,8 @@ const Layout = () => {
                     <IntroPage />
                     <SkillTable />
                     <PortPage />
+                    <HistPage />
+                    <ByePage />
                 </UserContext.Provider>
             </div>
             <div className={ !isOpened ?  style.footer__progressbar : `${style.footer__progressbar} ${style.footer__progressbar__onlayer}` } style={{ width : pgbarWidth}} />

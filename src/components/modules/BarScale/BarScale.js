@@ -8,10 +8,6 @@ const BarScale = (props) => {
     let scale = props.score / props.totalScore * scaleForBar;
     scale += "px";
 
-    console.log(">>> scaleForBar : " + scaleForBar);
-    console.log(">>> props.scor : " + props.score);
-    console.log(">>> scale : " + scale);
-
     return (
         <div className={style.scale__box}>
             <div style={{width: "20px"}}/>

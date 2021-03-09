@@ -57,7 +57,7 @@ const SkillTable = () => {
                                 <span>JS, React</span>
                             </th>
                             <td>
-                                <BarScale score={3} totalScore={totalScore} />
+                                <BarScale score={2} totalScore={totalScore} />
                             </td>
                         </tr>
                         <tr>

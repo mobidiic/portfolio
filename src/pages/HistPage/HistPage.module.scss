@@ -1,0 +1,67 @@
+@import "../../Constants.scss";
+@import "../../Mixin.scss";
+
+
+.hist__box {
+    height: 80vh;
+}
+
+
+.hist__title {
+    @include font-subtitle;
+
+    position: relative;
+    margin: 40px;
+    margin-top: 10vh;
+    margin-left: 10vw;
+    margin-bottom: 80px;
+
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 120px;
+    }
+}
+
+.hist__list {
+
+    margin-left: 16vw;
+
+
+    .hist__list_title {
+
+        font-size: 1.2rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+
+        @media screen and (min-width: 768px) {
+            width: 74vw;
+            border-bottom : 1px solid lighten($color-text, 70%);
+        }
+
+    }
+
+    .hist__list_date {
+
+        padding-bottom: 2rem;
+        font-size: 1rem;
+        color: $color-cta;
+
+        @media screen and (min-width: 768px) {
+            text-align: right;
+            padding-right: 10vw;
+        }
+
+    }
+
+    &::before {
+        content: "";
+        width: 2px;
+        height: 20rem;
+        background-color: lighten($color-text, 50%);
+        position: absolute;
+        left: 10vw;
+    }
+
+    
+
+}
