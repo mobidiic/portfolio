@@ -1,0 +1,2 @@
+(this.webpackJsonpportfolio=this.webpackJsonpportfolio||[]).push([[6],{31:function(p,t,i){"use strict";i.r(t),t.default=i.p+"static/media/pf_img_pr_1.6925d3dc.jpg"}}]);
+//# sourceMappingURL=6.b14808bf.chunk.js.map
