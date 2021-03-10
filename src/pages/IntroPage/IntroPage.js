@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import style from "./IntroPage.module.scss";
 import { UserContext } from "../../layouts/Layout";
 import ID from "../../assets/data/Introduction.json";
-import img from "../../assets/images/pf_img_main.png";
+import img from "../../assets/images/pf_img_main.jpg";
 
 const IntroPage = () => {
 
