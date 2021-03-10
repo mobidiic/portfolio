@@ -22,13 +22,14 @@ $height-cont: 200px;
     width: #{$width-cont};
     height: #{$height-cont};
     left: calc(50% - (#{$width-cont}/2));
-    top: calc(40% - (#{$height-cont}/2));
+    top: calc(50% - (#{$height-cont}/2));
     display: flex;
     flex-direction: column;
     align-items: center;
 
     @media screen and (min-width: 768px) {
         margin: 0;
+        top: calc(60% - (#{$height-cont}/2));
     }
 
     span {

@@ -4,6 +4,11 @@
 
 .hist__box {
     height: 80vh;
+
+    @media screen and (min-width: 768px) {
+        height: 100vh;
+        margin-bottom: 60px;
+    }
 }
 
 
@@ -18,7 +23,7 @@
 
 
     @media screen and (min-width: 768px) {
-        margin-bottom: 120px;
+        margin-bottom: 60px;
     }
 }
 
