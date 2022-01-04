@@ -1,151 +1,130 @@
 {
     "services" : [
         {
-            "title" : {
-                "KR" : "롯데프레시 운영",
-                "EN" : "Lottefresh Service Ops"
-            },
+            "title" : "롯데프레시 운영",
             "start_dtime" : "2019.02",
             "end_dtime" : "2020.11",
             "type" : "OPS",
             "details" : {
                 "images" : "pf_img_op_1.jpg",
-                "role" : {
-                    "KR" : "개발PM",
-                    "EN" : "TPM"
-                },
-                "description" : {
-                    "KR" : [
+                "role" :  "개발PM",
+                "contribution" : [
                         "서비스 운영, 개발관리",
                         "개발공수산정 및 배포 일정관리",
                         "요건 접수 및 기능설계",
                         "장애관리 및 운영개선"
-                    ],
-                    "EN" : [
-                        "Service operation, Dev team managing",
-                        "Checking M/M and Deploy managing",
-                        "Accept requirement and Feature design",
-                        "Incident management and service improvement"
-                    ]
-                },
-                "key_logs" : {
-                    "KR" : [
-                        "종속상품재고통합 - 결품율 2%p 감소",
-                        "새벽배송권역 확장 - 새벽배송매출 13% 증가"
-                    ],
-                    "EN" : [
-                        "product stock dependency integration - 3%p decrease in sold-out rate",
-                        "Expansion of Delivery Coverage in Dawn  - 13% increase in Dawn Delivery revenue"
-                    ]
-                }
+                ]
+                ,
+                "key_logs" : [
+                        {
+                            "title" : "종속상품 재고통합",
+                            "problem" : "종속상품으로 묶인 상품들의 결품율이 높음",
+                            "strategy" : "종속상품들의 재고를 통합",
+                            "solution" : "재고 관리 시 종속상품들의 재고는 마스터상품의 재고를 같이 보도록 수정",
+                            "performance" : "결품율 30% 감소"
+                        },
+                        {
+                            "title" : "새벽배송권역 확장",
+                            "problem" : "새벽배송 전용으로 권역 확장이 필요",
+                            "strategy" : "해당 권역만을 가지고 있는 가상의 점포 생성",
+                            "solution" : "가상의 점포 생성 후 주문-재고-정산을 연결",
+                            "performance" : "새벽배송 매출 비중 15% 증가"
+                        }
+                ]
             }
         },
         {
-            "title" : {
-                "KR" : "기가지니 GPAY 프로젝트",
-                "EN" : "KT Gigagenie Gpay Prj"
-            },
+            "title" : "기가지니 GPAY 프로젝트",
             "start_dtime" : "2019.04",
             "end_dtime" : "2019.09",
             "type" : "PRJ",
             "details" : {
                 "images" : "pf_img_pr_1.jpg",
-                "role" : {
-                    "KR" : "PM",
-                    "EN" : "PM"
-                },
-                "object" : {
-                    "KR" : "음성결제수단 gpay 추가, VC 매출 신장",
-                    "EN" : "Add Voice Payment, Increase VC Sales"
-                },
-                "outcomes" : {
-                    "KR" : "매출 10% 증가",
-                    "EN" : "10% Increase in Sales"
-                },
-                "learned" : {
-                    "KR" : [
+                "role" : "PM",
+                "contribution" : [
+                    "유관부서, PG, 하드웨어 업체간 커뮤니케이션 담당",
+                    "API 구조 설계",
+                    "프로젝트 일정 관리 및 이슈트래킹"
+                ],
+                "object" :  "음성결제수단 gpay 추가, 보이스커머스 활성화",
+                "outcomes" :  "매출 10% 증가",
+                "learned" : [
                         "음성, 리모콘 UX의 특성",
                         "3자 커뮤니케이션의 어려움",
                         "프로젝트 매니징 전반"
-                    ],
-                    "EN" : [
-                        "Voice, Remote-controller UX",
-                        "Difficulty of Cross-communication",
-                        "Overall Project Managing"
-                    ]
-                }
+                ]
             }
         },
         {
-            "title" : {
-                "KR" : "롯데ON-롯데프레시 통합 프로젝트",
-                "EN" : "LotteON-Lottefresh Merging Prj"
-            },
+            "title" : "롯데ON-롯데프레시 통합 프로젝트",
             "start_dtime" : "2020.06",
             "end_dtime" : "2020.11",
             "type" : "PRJ",
             "details" : {
                 "images" : "pf_img_pr_2.jpg",
-                "role" : {
-                    "KR" : "회원, 판촉/이벤트, 배송/클레임, O4O 모듈 개발PM",
-                    "EN" : "TPM of Member, Promotion/Event, Delivery/Customer Claim, O4O Services"
-                },
-                "object" : {
-                    "KR" : "롯데ON-롯데프레시 서비스 통합",
-                    "EN" : "LotteON-Lottefresh Service Integration"
-                },
-                "outcomes" : {
-                    "KR" : "적시 양품 반영, 확장성 고려한 구조개선",
-                    "EN" : "Open Successfully In Time with appropriate Service level, and Renewal to Scalable Structure"
-                },
-                "learned" : {
-                    "KR" : [
+                "role" : "개발PM",
+                "contribution" : [
+                    "MS, 계열사간 커뮤니케이션",
+                    "배송, 클레임, 판촉, 회원, O2O 모듈 개발협의 담당"
+                ],
+                "object" : "롯데ON-롯데프레시 서비스의 안정적 통합",
+                "outcomes" : "서비스레벨 충족",
+                "learned" : [
                         "MSA 특성과 여러 서비스 간 연동개발",
-                        "TC의 중요성과 오픈/롤백 시나리오의 중요성"
-                    ],
-                    "EN" : [
-                        "What about Microservice Architecture and Integration between services",
-                        "Importance of Testcase and open/rollback scenario"
-                    ]
-                }
+                        "의사결정권자의 책임"
+                ]
             }
         },
         {
-            "title" : {
-                "KR" : "롯데ON 전시 운영",
-                "EN" : "LotteOn Display Ops"
-            },
+            "title" : "롯데ON 전시 운영",
             "start_dtime" : "2020.12",
-            "end_dtime" : "",
+            "end_dtime" : "2022.01",
             "type" : "OPS",
             "details" : {
                 "images" : "pf_img_op_2.jpg",
-                "role" : {
-                    "KR" : "전시서비스 개발PM",
-                    "EN" : "Display Service TPM"
-                },
-                "description" : {
-                    "KR" : [
+                "role" : "전시서비스 개발PM",
+                "contribution" : [
                         "서비스 운영, 개발관리, 개발",
                         "개발공수산정 및 배포 일정관리",
                         "요건 접수 및 기능설계",
                         "장애관리 및 운영개선"
-                    ],
-                    "EN" : [
-                        "Service operation, Dev team managing, Development",
-                        "Checking M/M and Deploy managing",
-                        "Accept requirement and Feature design",
-                        "Incident management and service improvement"
                     ]
-                },
-                "key_logs" : {
-                    "KR" : [
-                        "전면장애포인트 및 성능개선(매장 GEN) - "
-                    ],
-                    "EN" : [
-                        "Removing SPOF and Performance improvement by GEN - "
+                ,
+                "key_logs" : [
+                        {
+                            "title" : "매장 GEN 적용",
+                            "problem" : "전시 장애시 전면장애, 트래픽 몰릴 시 지연 발생",
+                            "strategy" : "데이터를 미리 만들어놔서 전시 장애/행사 시에도 안정적인 서비스 제공",
+                            "solution" : "데이터를 json 파일로 생성해서 API 장애/지연 시에도 데이터 제공",
+                            "performance" : "SPOF 개선 및 속도증가(.5s), 행사안정성 증가(응답시간 2s 감소)"
+                        },
+                        {
+                            "title" : "데이터 레이턴시 개선",
+                            "problem" : "MSA상 타 서비스의 데이터를 복제해오는데 레이턴시가 있음",
+                            "strategy" : "데이터를 가져오는 경로를 최소화한다",
+                            "solution" : "원본데이터 생성 후 변화를 가져오는 것이 아닌, 원본데이터 생성 시의 데이터를 받아온다",
+                            "performance" : "가격 동기화 관련 문의 90% 감소(예상)"
+                        }
                     ]
-                }
+            }
+        },
+        {
+            "title" : "장보기탭 리뉴얼 프로젝트",
+            "start_dtime" : "2021.10",
+            "end_dtime" : "2021.12",
+            "type" : "PRJ",
+            "details" : {
+                "images" : "pf_img_pr_3.jpg",
+                "role" : "전시 개발PM 및 API 개발",
+                "contribution" : [
+                    "클라이언트(웹/앱), 배송, 회원 간 커뮤니케이션 담당",
+                    "전시 API 설계 및 개발"
+                ],
+                "object" : "장보기 서비스 인입 및 시인성 증가",
+                "outcomes" : "UV 41% 증가",
+                "learned" : [
+                        "클라이언트별 영향도 파악의 중요성"
+                ]
             }
         }
     ]

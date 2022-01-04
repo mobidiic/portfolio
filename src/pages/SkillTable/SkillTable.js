@@ -66,7 +66,7 @@ const SkillTable = () => {
                                 <span>Java, Spring</span>
                             </th>
                             <td>
-                                <BarScale score={4} totalScore={totalScore} />
+                                <BarScale score={3} totalScore={totalScore} />
                             </td>
                         </tr>
                     </tbody>
@@ -95,7 +95,7 @@ const SkillTable = () => {
                                 <span>SQL, GA</span>
                             </th>
                             <td>
-                                <BarScale score={4} totalScore={totalScore} />
+                                <BarScale score={3} totalScore={totalScore} />
                             </td>
                         </tr>
                         <tr>

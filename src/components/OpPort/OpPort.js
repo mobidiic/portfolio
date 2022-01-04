@@ -21,6 +21,30 @@ const OpPort = (work) => {
         })
     };
 
+    const mapToComponent = (work) => {
+        return work.map((a, i) => (
+            <div key={i}>
+                <div className={style.op__keylogs_title}>
+                    {i+1}. {a.title}
+                </div>
+                <ul>
+                    <li className={style.op__keylogs_cont}>
+                        <span>문제발견 :</span><br/> {a.problem}
+                    </li>
+                    <li className={style.op__keylogs_cont}>
+                        <span>해결전략 :</span><br/> {a.strategy}
+                    </li>
+                    <li className={style.op__keylogs_cont}>
+                        <span>처리방안 :</span><br/> {a.solution}
+                    </li>
+                    <li className={style.op__keylogs_cont}>
+                        <span>성과분석 :</span><br/> {a.performance}
+                    </li>
+                </ul>
+            </div>
+        ))
+    };
+
     return (
         <div className={style.page__box}>
             <div className={style.op__title}>
@@ -47,19 +71,19 @@ const OpPort = (work) => {
             </div>
             <div className={style.op__desc_box}>
                 <div className={style.op__desc_subtitle}>
-                    Description
+                    Contribution
                 </div>
                 <ul className={style.op__desc_cont}>
-                    {mapToListing(work.description)}
+                    {mapToListing(work.contribution)}
                 </ul>
             </div>
             <div className={style.op__desc_box}>
                 <div className={style.op__desc_subtitle}>
                     Key Logs
                 </div>
-                <ul className={style.op__desc_cont}>
-                    {mapToListing(work.keyLogs)}
-                </ul>
+                <div className={style.op__desc_cont}>
+                    {mapToComponent(work.keyLogs)}
+                </div>
             </div>
         </div>
     )

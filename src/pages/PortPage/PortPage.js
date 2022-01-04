@@ -7,7 +7,6 @@ import WE from "../../assets/data/WorkExperience.json";
 
 const PortPage = () => {
 
-    const lang = useContext(UserContext).lang;
     const services = WE.services;
 
     const mapToWorkComponent = (service) => {
@@ -28,32 +27,31 @@ const PortPage = () => {
     };
 
     const mapOpWork = (work, i) => {
-        // console.log("mapOpWork : " + work.title[lang] + " / "+ work.start_dtime + " / "+ work.end_dtime + " / "+ work.details.images + " / "+ work.details.role[lang] + " / "+ work.details.description[lang] + " / " + work.details.key_logs[lang] + " / " + i);
         return (
             <OpPort 
-                title = {work.title[lang]}
+                title = {work.title}
                 startDtime = {work.start_dtime}
                 endDtime = {work.end_dtime}
                 images = {work.details.images}
-                role = {work.details.role[lang]}
-                description = {work.details.description[lang]}
-                keyLogs = {work.details.key_logs[lang]}
+                role = {work.details.role}
+                contribution = {work.details.contribution}
+                keyLogs = {work.details.key_logs}
                 key = {i}   />
         )
     };
 
     const mapPrWork = (work, i) => {
-        // console.log("mapPrWork : " + work.title[lang] + " / "+ work.start_dtime + " / "+ work.end_dtime + " / "+ work.details.images + " / "+ work.details.role[lang] + " / "+ work.details.object[lang] + " / " + work.details.outcomes[lang] + " / " + work.details.learned[lang] + " / "  + i);
         return (
             <PrPort 
-                title = {work.title[lang]}
+                title = {work.title}
                 startDtime = {work.start_dtime}
                 endDtime = {work.end_dtime}
                 images = {work.details.images}
-                role = {work.details.role[lang]}
-                object = {work.details.object[lang]}
-                outcomes = {work.details.outcomes[lang]}
-                learned = {work.details.learned[lang]}
+                role = {work.details.role}
+                contribution = {work.details.contribution}
+                object = {work.details.object}
+                outcomes = {work.details.outcomes}
+                learned = {work.details.learned}
                 key = {i}   />
         )
     }

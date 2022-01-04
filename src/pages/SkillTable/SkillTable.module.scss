@@ -36,13 +36,15 @@
     }
 
     thead {
-        height: 100px;
+        // height: 100px;
         padding: auto;
 
         tr > th {
             padding: 0;
             padding-bottom: 12px;
             width: 80px;
+            line-height: 2rem;
+            height: 2rem;
         }
     }
 

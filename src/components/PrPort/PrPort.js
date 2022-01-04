@@ -47,6 +47,14 @@ const PrPort = (work) => {
             </div>
             <div className={style.pr__desc_box}>
                 <div className={style.pr__desc_subtitle}>
+                    Contribution
+                </div>
+                <ul className={style.pr__desc_cont}>
+                    {mapToListing(work.contribution)}
+                </ul>
+            </div>
+            <div className={style.pr__desc_box}>
+                <div className={style.pr__desc_subtitle}>
                     Object
                 </div>
                 <div className={style.pr__desc_cont}>

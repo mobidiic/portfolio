@@ -47,23 +47,26 @@
     .op__desc_cont {
         padding: 10px;
         padding-left: 10vw;
+
+
+        .op__keylogs_title {
+            margin: 7% 0 5% -7%;
+            color: darken($color-cta, 20%);
+        }
+
+        ul > li{
+            @include dotListing("15vw");
+            margin-left: 5%;
+            line-height: 1.3rem;
+            span {
+                font-size: 1rem;
+            }
+        }
+        
     }
 
     ul > li{
-
-        margin-bottom: 1rem;
-
-        &::before {
-            content: '';
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background-color: #{$color-text};
-            border-radius: 2px;
-            margin-right: 20px;
-            margin-top: 8px;
-            left: 10vw;
-        }
-
+        @include dotListing("10vw");
     }
+
 }

@@ -12,7 +12,7 @@ const HistPage = () => {
         return work.map((a, i) => (
             <div key={i}>
                 <div className={style.hist__list_title}>
-                    {a.title[lang]}
+                    {a.title}
                 </div>
                 <div className={style.hist__list_date}>
                     {a.start_dtime} - {a.end_dtime}

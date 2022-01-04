@@ -13,7 +13,7 @@ export const UserContext = React.createContext();
 
 const Layout = () => {
 
-    const [ lang, setLang ] = useState("EN");
+    const [ lang, setLang ] = useState("KR");
     const [ isOpened , setIsOpened ] = useState(false);
     const [ pgbarWidth, setPgbarWidth ] = useState(0);
     const viewLang = lang == "EN" ? "KR" : "EN" ;
@@ -93,8 +93,8 @@ const Layout = () => {
                     <TitlePage />
                     <IntroPage />
                     <SkillTable />
-                    <PortPage />
                     <HistPage />
+                    <PortPage />
                     <ByePage />
                 </UserContext.Provider>
             </div>
