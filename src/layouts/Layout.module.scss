@@ -42,6 +42,8 @@ div .header__box {
     }
 
     .header__button {
+        font-family: #{$sans-regular};
+        color: #{$color-text};
         padding: 10px;
         position: relative;
         top: 0;
