@@ -3,10 +3,13 @@ import OpPort from "../../components/OpPort/OpPort";
 import PrPort from "../../components/PrPort/PrPort";
 import style from "./PortPage.module.scss";
 import { UserContext } from "../../layouts/Layout";
-import WE from "../../assets/data/WorkExperience.json";
+import WE_EN from "../../assets/data/WorkExperience.en.json";
+import WE_KR from "../../assets/data/WorkExperience.kr.json";
 
 const PortPage = () => {
 
+    const lang = useContext(UserContext).lang;
+    const WE = lang == "EN" ? WE_EN : WE_KR;
     const services = WE.services;
 
     const mapToWorkComponent = (service) => {

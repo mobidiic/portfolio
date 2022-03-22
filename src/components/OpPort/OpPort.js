@@ -1,15 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { UserContext } from "../../layouts/Layout";
 import style from "./OpPort.module.scss";
 
 const OpPort = (work) => {
 
     const [image, setImage] = useState("");
+    const lang = useContext(UserContext).lang;
 
     useEffect(()=>{
         import(`../../assets/images/${work.images}`).then(image => {
             setImage(image.default);
         });
     },[]);
+
+    let problem = lang == "EN" ? "Problem Discover" : "문제발견" ;
+    let strategy = lang == "EN" ? "Strategy" : "해결전략" ;
+    let solution = lang == "EN" ? "Solution" : "처리방안" ;
+    let outcomes = lang == "EN" ? "Outcomes" : "성과분석" ;
 
     const mapToListing = (list) => {
         return list.map((a, i) => {
@@ -21,6 +28,7 @@ const OpPort = (work) => {
         })
     };
 
+
     const mapToComponent = (work) => {
         return work.map((a, i) => (
             <div key={i}>
@@ -29,16 +37,16 @@ const OpPort = (work) => {
                 </div>
                 <ul>
                     <li className={style.op__keylogs_cont}>
-                        <span>문제발견 :</span><br/> {a.problem}
+                        <span>{problem} :</span><br/> {a.problem}
                     </li>
                     <li className={style.op__keylogs_cont}>
-                        <span>해결전략 :</span><br/> {a.strategy}
+                        <span>{strategy} :</span><br/> {a.strategy}
                     </li>
                     <li className={style.op__keylogs_cont}>
-                        <span>처리방안 :</span><br/> {a.solution}
+                        <span>{solution} :</span><br/> {a.solution}
                     </li>
                     <li className={style.op__keylogs_cont}>
-                        <span>성과분석 :</span><br/> {a.performance}
+                        <span>{outcomes} :</span><br/> {a.performance}
                     </li>
                 </ul>
             </div>

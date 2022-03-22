@@ -1,11 +1,13 @@
 import React, { useContext } from "react";
 import style from "./HistPage.module.scss";
 import { UserContext } from "../../layouts/Layout";
-import WE from "../../assets/data/WorkExperience.json";
+import WE_EN from "../../assets/data/WorkExperience.en.json";
+import WE_KR from "../../assets/data/WorkExperience.kr.json";
 
 const HistPage = () => {
 
     const lang = useContext(UserContext).lang;
+    const WE = lang == "EN" ? WE_EN : WE_KR;
     const services = WE.services;
 
     const mapToComponent = (work) => {

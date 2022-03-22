@@ -1,0 +1,156 @@
+{
+    "services" : [
+        {
+            "title" : "Lottefresh",
+            "start_dtime" : "2019.02",
+            "end_dtime" : "2020.11",
+            "type" : "OPS",
+            "details" : {
+                "images" : "pf_img_op_1.jpg",
+                "role" :  "TPM",
+                "contribution" : [
+                        "Operate Service / Manage Developers",
+                        "Priotising and Scheduling",
+                        "Accept Business Requirement and Design Feature",
+                        "Improve Performance Indicator",
+                        "Handle Error"
+                ]
+                ,
+                "key_logs" : [
+                        {
+                            "title" : "Integrating Master-Slave Product Inventory",
+                            "problem" : "High Cancel Rate in Slave Products",
+                            "strategy" : "Integrating Their Inventory",
+                            "solution" : "Modify to Check their Inventory together when Checking Inventory Counts",
+                            "performance" : "Decrease Cancel Rate by 30%"
+                        },
+                        {
+                            "title" : "Expand Early-Morning Delivery(EMD) Range",
+                            "problem" : "Business need to expand Deilvery Range",
+                            "strategy" : "Produce Virtual Store that only have EMD Range",
+                            "solution" : "Then, Connect Order/Inventory/Settlement to Origin Store",
+                            "performance" : "Increase EMD incomes by 15%"
+                        }
+                ]
+            }
+        },
+        {
+            "title" : "KT Gigagenie GPAY Project",
+            "start_dtime" : "2019.04",
+            "end_dtime" : "2019.09",
+            "type" : "PRJ",
+            "details" : {
+                "images" : "pf_img_pr_1.jpg",
+                "role" : "PM",
+                "contribution" : [
+                    "Communicate w/ PG, HW corp, related division",
+                    "Design API Structure",
+                    "Manage Project and Track Issues"
+                ],
+                "object" :  "Increase Voice Commerce Incomes",
+                "outcomes" :  "Increse VC Incomes by 10%",
+                "learned" : [
+                        "Hardness of UX of Remote Control and Voice",
+                        "Hardness of Communicating multi-stakeholders",
+                        "Overall Project Managing Process"
+                ]
+            }
+        },
+        {
+            "title" : "Lotteon-Lottefresh Integration Project",
+            "start_dtime" : "2020.06",
+            "end_dtime" : "2020.11",
+            "type" : "PRJ",
+            "details" : {
+                "images" : "pf_img_pr_2.jpg",
+                "role" : "TPM",
+                "contribution" : [
+                    "Communicate w/ Micro Services and Affiliate Corps",
+                    "Design service of Delivery, Claims, Promotions, Members, O2O modules"
+                ],
+                "object" : "Stable Integrate of Lottefresh and LotteOn Service",
+                "outcomes" : "Satisfy SLA",
+                "learned" : [
+                        "Knowledge about MSA",
+                        "Develop in MSA",
+                        "Manage Risk w/ Confusing Decision Maker"
+                ]
+            }
+        },
+        {
+            "title" : "Lotteon Display Service",
+            "start_dtime" : "2020.12",
+            "end_dtime" : "2022.03",
+            "type" : "OPS",
+            "details" : {
+                "images" : "pf_img_op_2.jpg",
+                "role" : "Display TPM",
+                "contribution" : [
+                        "Operate Service / Manage Developers",
+                        "Priotising and Scheduling",
+                        "Accept Business Requirement and Design Feature",
+                        "Improve Performance Indicator",
+                        "Handle Error"
+                    ]
+                ,
+                "key_logs" : [
+                        {
+                            "title" : "Apply GEN file in Display Shop",
+                            "problem" : "Display Service as SPOF, Serve Stable Service in High Traffic Situation",
+                            "strategy" : "Serve seamless UX",
+                            "solution" : "Make JSON Files of Display Data, so that offer Data of Display API",
+                            "performance" : "Eliminate SPOF, Decrease Response time(.5s, 2s in High Traffic)"
+                        },
+                        {
+                            "title" : "Reduce Data Latency",
+                            "problem" : "There is Data Latency when getting data From Other Service",
+                            "strategy" : "Minimize the route of Data journey",
+                            "solution" : "Get Source Data when table is making, not when table was made.",
+                            "performance" : "Decrease inquiry about product data by 90%"
+                        }
+                    ]
+            }
+        },
+        {
+            "title" : "Grocery Shop Renewal Project",
+            "start_dtime" : "2021.09",
+            "end_dtime" : "2021.12",
+            "type" : "PRJ",
+            "details" : {
+                "images" : "pf_img_pr_3.jpg",
+                "role" : "Display TPM & Display API developer",
+                "contribution" : [
+                    "Communicate w/ Client(WEB,APP), Delivery Service, Member Service",
+                    "Design Display API structure and Develop"
+                ],
+                "object" : "Increase Users Using Grocery Shop",
+                "outcomes" : "Increase UV by 41%",
+                "learned" : [
+                        "Importance of Understanding the Impact level of Each Client",
+                        "Importance of Priority Indicator Design"
+                ]
+            }
+        },
+        {
+            "title" : "Beuaty Vertical Commerce Project",
+            "start_dtime" : "2022.01",
+            "end_dtime" : "2022.03",
+            "type" : "PRJ",
+            "details" : {
+                "images" : "pf_img_pr_3.jpg",
+                "role" : "Event, Review Module TPM & Display API developer",
+                "contribution" : [
+                    "Communicate w/ Client, Review Service, Event Service",
+                    "Design Display API structure and Develop",
+                    "Redesign Display Module Structure"
+                ],
+                "object" : "Enhance Beauty Category",
+                "outcomes" : "Increase Beauty Category Incomes by 00%",
+                "learned" : [
+                    "Importance of Why should I do this, Shared Vision",
+                    "Understanding Display Module Structure by Redesign that"
+                ]
+            }
+        }
+    ]
+}

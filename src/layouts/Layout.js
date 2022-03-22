@@ -79,7 +79,7 @@ const Layout = () => {
                     <span />
                 </div>
                 <div className={style.header__title}>
-                    CEAN's PF
+                    CEANTFOLIO
                 </div>
                 <div className={style.header__button}>
                     <button onClick={ handleLanguage }> {viewLang} </button>
