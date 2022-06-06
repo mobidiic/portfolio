@@ -84,7 +84,7 @@
             "type" : "OPS",
             "details" : {
                 "images" : "pf_img_op_2.jpg",
-                "role" : "Display TPM",
+                "role" : "Display Service TPM",
                 "contribution" : [
                         "Operate Service / Manage Developers",
                         "Priotising and Scheduling",
@@ -145,11 +145,38 @@
                     "Redesign Display Module Structure"
                 ],
                 "object" : "Enhance Beauty Category",
-                "outcomes" : "Increase Beauty Category Incomes by 00%",
+                "outcomes" : "Increase Beauty Category MAU by 300%, monthly new beauty club member by 800%",
                 "learned" : [
                     "Importance of Why should I do this, Shared Vision",
                     "Understanding Display Module Structure by Redesign that"
                 ]
+            }
+        },
+        {
+            "title" : "Lotteon Member Service",
+            "start_dtime" : "2022.04",
+            "end_dtime" : "",
+            "type" : "OPS",
+            "details" : {
+                "images" : "pf_img_op_3.jpeg",
+                "role" : "Member Service TPM",
+                "contribution" : [
+                        "Operate Service / Manage Developers",
+                        "Priotising and Scheduling",
+                        "Accept Business Requirement and Design Feature",
+                        "Improve Performance Indicator",
+                        "Handle Error"
+                    ]
+                ,
+                "key_logs" : [
+                        {
+                            "title" : "Auto-login Service Level Increasing",
+                            "problem" : "Some specific member cannot logged in automatically",
+                            "strategy" : "Analyse atypical server logs and Solve the problem",
+                            "solution" : "Encode auto-login token",
+                            "performance" : "Error that cannot find member decrease by 99.9%"
+                        }
+                    ]
             }
         }
     ]
