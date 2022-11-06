@@ -2,6 +2,8 @@
     "services" : [
         {
             "title" : "롯데프레시 운영",
+            "isPublic" : true,
+            "priority" : 4,
             "start_dtime" : "2019.02",
             "end_dtime" : "2020.11",
             "type" : "OPS",
@@ -36,6 +38,8 @@
         },
         {
             "title" : "기가지니 GPAY 프로젝트",
+            "isPublic" : false,
+            "priority" : 1,
             "start_dtime" : "2019.04",
             "end_dtime" : "2019.09",
             "type" : "PRJ",
@@ -58,6 +62,8 @@
         },
         {
             "title" : "롯데ON-롯데프레시 통합 프로젝트",
+            "isPublic" : true,
+            "priority" : 3,
             "start_dtime" : "2020.06",
             "end_dtime" : "2020.11",
             "type" : "PRJ",
@@ -78,14 +84,16 @@
         },
         {
             "title" : "롯데ON 전시 운영",
+            "isPublic" : true,
+            "priority" : 2,
             "start_dtime" : "2020.12",
             "end_dtime" : "2022.03",
             "type" : "OPS",
             "details" : {
                 "images" : "pf_img_op_2.jpg",
-                "role" : "전시서비스 개발PM",
+                "role" : "전시서비스 Back-End 개발자",
                 "contribution" : [
-                        "서비스 운영, 개발관리, 개발",
+                        "서비스 운영, API 및 서버 개발",
                         "개발공수산정 및 배포 일정관리",
                         "요건 접수 및 기능설계",
                         "성과지표 개선",
@@ -105,13 +113,15 @@
                             "problem" : "MSA상 타 서비스의 데이터를 복제해오는데 레이턴시가 있음",
                             "strategy" : "데이터를 가져오는 경로를 최소화한다",
                             "solution" : "원본데이터 생성 후 변화를 가져오는 것이 아닌, 원본데이터 생성 시의 데이터를 받아온다",
-                            "performance" : "가격 동기화 관련 문의 90% 감소"
+                            "performance" : "가격 동기화 관련 문의 90% 감소 예상"
                         }
                     ]
             }
         },
         {
             "title" : "장보기탭 리뉴얼 프로젝트",
+            "isPublic" : false,
+            "priority" : 1,
             "start_dtime" : "2021.09",
             "end_dtime" : "2021.12",
             "type" : "PRJ",
@@ -132,6 +142,8 @@
         },
         {
             "title" : "뷰티 버티컬 커머스 프로젝트",
+            "isPublic" : false,
+            "priority" : 1,
             "start_dtime" : "2022.01",
             "end_dtime" : "2022.03",
             "type" : "PRJ",
@@ -153,6 +165,8 @@
         },
         {
             "title" : "롯데ON 회원 운영",
+            "isPublic" : true,
+            "priority" : 1,
             "start_dtime" : "2022.04",
             "end_dtime" : "",
             "type" : "OPS",

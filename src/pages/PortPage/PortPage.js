@@ -13,8 +13,8 @@ const PortPage = () => {
     const services = WE.services;
 
     const mapToWorkComponent = (service) => {
-        // console.log("mapToWorkComponent : " + JSON.stringify(service));
-        return service.map((work, i) => generateOpPrWork(work, i))
+        let filteredAndSortedServices = service.filter(work => work.isPublic).sort((a, b) => a.priority - b.priority);
+        return filteredAndSortedServices.map((work, i) => generateOpPrWork(work, i))
     };
 
     const generateOpPrWork = (work, i) => {

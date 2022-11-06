@@ -14,8 +14,13 @@ const CateLayer = () => {
                     </a>
                 </li>
                 <li className={style.cate_layer__item} >
+                    <a href="https://ceaniee.notion.site/ceaniee/About-a9fbbc7084594eb8a370e8a0313b2c83">
+                        Notion
+                    </a>
+                </li>
+                <li className={style.cate_layer__item} >
                     <a href="https://medium.com/@cean_park">
-                        Medium
+                        Blog
                     </a>
                 </li>
                 <li className={style.cate_layer__item} >
